@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="ecomerce.css">
+    <title>e-comerce</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bx-headphone'>HeadPhone</i></a>
+        <ul class="navegação">
+            <li><a href="#">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="quemSomos.html">Quem Somos</a></li>
+        </ul>
+        <div class="header-icons">
+            <div id="caixa" class="search-div">
+                <input type="text" class="search-text" placeholder="Pesquisar">
+                <i class='bx bx-search'></i>
+            </div>
+            <a href="carrinho.html" class="cart-icon"><i class='bx bx-cart'></i></a>
+            <div id="menu"><i class='bx bx-menu'></i></div>
+        </div>
+    </header>
+    <nav>
+    <section class="home">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="product" style="background-image: url('fone03.png');"></div>
+                <div class="product" style="background-image: url('fone02.png');"></div>
+                <div class="product" style="background-image: url('fone01.png');"></div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+            <button class="prev"><i class='bx bx-chevron-left'></i></button>
+            <button class="next"><i class='bx bx-chevron-right'></i></button>
+        </div>
+        <div class="home-text">
+            <h1>Carregador <br> HeadPhones</h1>
+            <h5>A melhor maneira e qualidade para se ouvir</h5>
+            <h3>200R$</h3>
+            <a href="#" class="btn">Compre Agora</a>
+        </div>
+    </section><!--home-->
+    </nav>
+
+    </section><!--home-->
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const products = document.querySelectorAll('.product');
+
+        let currentIndex = 0;
+
+        function showProduct(index) {
+            products.forEach((product, i) => {
+                product.style.transform = `translateX(${100 * (i - index)}%)`;
+            });
+        }
+
+        function nextProduct() {
+            currentIndex = (currentIndex + 1) % products.length;
+            showProduct(currentIndex);
+        }
+
+        function prevProduct() {
+            currentIndex = (currentIndex - 1 + products.length) % products.length;
+            showProduct(currentIndex);
+        }
+
+        nextButton.addEventListener('click', nextProduct);
+        prevButton.addEventListener('click', prevProduct);
+    </script>
+
+</body>
+
+</html>

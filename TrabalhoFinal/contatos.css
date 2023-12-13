@@ -1,0 +1,40 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins',
+         sans-serif;
+     text-decoration: none;
+     list-style: none;
+ }
+
+ :root {
+     --bg-color: var(--bg-color) #051b36;
+     --tex-color: #fff;
+     --main-color: #edb24c;
+     --other-color: #fcfcfc;
+     --h1-font: 4rem;
+     --p-font: 1rem;
+
+ }
+
+ body {
+     background-color: #1d2631;
+     color: var(--tex-color);
+ }
+
+ a {
+     color: #edb24c;
+ }
+
+ .text {
+     color: #edb24c;
+ }
+
+ img {
+     width: 200px;
+     height: 190px;
+     border-radius: 100%;
+     align-items: center;
+     position: relative;
+ }
